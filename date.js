@@ -4,40 +4,19 @@
  * 
  *  @author : Ferron Hanse
  *  @date : 10/11/2010
- *  @lincense : do not evil!
+ *  @lincense : do no evil!
  *  
  */
 
 // a global month names array
-
 var gsMonthNames = new Array(
-'January',
-'February',
-'March',
-'April',
-'May',
-'June',
-'July',
-'August',
-'September',
-'October',
-'November',
-'December'
+'January','February','March','April','May','June','July','August','September','October','November','December'
 );
-
 
 // a global day names array
-
 var gsDayNames = new Array(
-'Sunday',
-'Monday',
-'Tuesday',
-'Wednesday',
-'Thursday',
-'Friday',
-'Saturday'
+'Sunday','Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'
 );
-
 
 
 // the date format prototype
@@ -70,7 +49,6 @@ Date.prototype.format = function(f)
         }
     );
 }
-
 
 // Zero-Fill
 Number.prototype.zf = function(l) { return '0'.string(l - this.toString().length) + this; }
