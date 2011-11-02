@@ -28,7 +28,7 @@ Date.prototype.format = function (f) {
 
     var d = this;
 
-    return f.replace(/(yy|yyyy|mmmm|mmm|mm|dddd|ddd|dd|hh|nn|ss|a\/p)/gi,
+    return f.replace(/(yyyy|yy|mmmm|mmm|mm|dddd|ddd|dd|hh|nn|ss|a\/p)/gi,
         function (val) {
             switch (val.toLowerCase()) {
                 case 'yy': return d.getFullYear().substr(2);
