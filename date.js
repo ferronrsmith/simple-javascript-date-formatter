@@ -21,7 +21,6 @@ var gsDayNames = new Array(
 
 
 // the date format prototype
-
 Date.prototype.format = function (f) {
     if (!this.valueOf())
         return ' ';
@@ -46,6 +45,22 @@ Date.prototype.format = function (f) {
             }
         }
     );
+}
+
+// string date parse function
+String.prototype.parse = function(delim) {
+	var parts = this.split(delim);
+	if (parts.length == 3) {
+		return new Date(
+			parseInt(parts[0]), // year
+			parseInt(parts[1] ? parts[1]-1 : 0), // month
+			parseInt(parts[2]), // date
+			0, // hourse
+			0, // mins
+			0, // secs
+			0 // millisec
+		);
+	}		
 }
 
 // Zero-Fill
