@@ -52,15 +52,16 @@ String.prototype.parse = function(delim) {
 	var parts = this.split(delim);
 	if (parts.length == 3) {
 		return new Date(
-			parseInt(parts[0]), // year
-			parseInt(parts[1] ? parts[1]-1 : 0), // month
-			parseInt(parts[2]), // date
-			0, // hourse
+			parseInt(parts[0], 10), // year
+			parseInt(parts[1] ? parts[1]-1 : 0, 10), // month
+			parseInt(parts[2], 10), // date
+			0, // hours
 			0, // mins
 			0, // secs
 			0 // millisec
 		);
-	}		
+	}	
+	
 }
 
 // Zero-Fill
